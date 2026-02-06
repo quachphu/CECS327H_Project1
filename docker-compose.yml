@@ -1,0 +1,65 @@
+# Reference : https://www.youtube.com/watch?v=DM65_JyGxCo 
+
+version: '3.8'
+
+services:
+  # TCP Server
+  server:
+    build:
+      context: .
+      dockerfile: Dockerfile.server
+    container_name: tcp-server
+    ports:
+      - "5001:5000"
+    networks:
+      - app-network
+    restart: unless-stopped
+
+  # Client 1
+  client1:
+    build:
+      context: .
+      dockerfile: Dockerfile.client
+    container_name: tcp-client-1
+    environment:
+      - SERVER_HOST=server
+      - SERVER_PORT=5000
+      - CLIENT_NAME=Client-1 (Phu)
+    depends_on:
+      - server
+    networks:
+      - app-network
+
+  # Client 2
+  client2:
+    build:
+      context: .
+      dockerfile: Dockerfile.client
+    container_name: tcp-client-2
+    environment:
+      - SERVER_HOST=server
+      - SERVER_PORT=5000
+      - CLIENT_NAME=Client-2 (Luis)
+    depends_on:
+      - server
+    networks:
+      - app-network
+
+  # Client 3
+  client3:
+    build:
+      context: .
+      dockerfile: Dockerfile.client
+    container_name: tcp-client-3
+    environment:
+      - SERVER_HOST=server
+      - SERVER_PORT=5000
+      - CLIENT_NAME=Client-3 (Prof Hailu Xu)
+    depends_on:
+      - server
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge

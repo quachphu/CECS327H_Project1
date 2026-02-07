@@ -22,7 +22,6 @@ CECS327H_Project1/
 
 ### 1. Install Docker
 
-**macOS:**
 ```bash
 # Download Docker Desktop from https://www.docker.com/products/docker-desktop
 # Install and start Docker Desktop

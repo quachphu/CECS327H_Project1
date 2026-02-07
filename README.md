@@ -15,7 +15,7 @@ CECS327H_Project1/
 ├── Dockerfile.server      # Server-specific Docker configuration
 ├── Dockerfile.client      # Client-specific Docker configuration
 ├── docker-compose.yml     # Multi-container orchestration
-└── README.md              # This file
+└── README.md              
 ```
 
 

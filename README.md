@@ -22,18 +22,13 @@ CECS327H_Project1/
 
 ### 1. Install Docker
 
-```bash
-# Download Docker Desktop from https://www.docker.com/products/docker-desktop
-# Install and start Docker Desktop
-```
-
 **Verify installation:**
 ```bash
 docker --version
 docker run hello-world
 ```
 
-### 2. Clone Repository
+### Clone Repository
 ```bash
 git clone https://github.com/quachphu/CECS327H_Project1.git
 cd CECS327H_Project1

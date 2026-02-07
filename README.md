@@ -138,11 +138,6 @@ tcp-client-1  | Received: '[SERVER] Message received at XX:XX:XX: ...'
 # All logs
 docker-compose logs
 
-# Server logs only
-docker logs tcp-server
-
-# Specific client logs
-docker logs tcp-client-1
 ```
 
 **Stop all containers:**

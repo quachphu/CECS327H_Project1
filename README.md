@@ -70,4 +70,3 @@ CECS327H_Project1/
 
 ---
 
-**Last Updated:** February 2026
